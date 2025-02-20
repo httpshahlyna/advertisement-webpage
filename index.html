@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treasure</title>
+    <style>
+        .album-scroll-container {
+            display: flex;
+            overflow-x: auto;
+            padding: 20px 0;
+            gap: 20px;
+            justify-content: flex-start;
+            align-items: center;
+            white-space: nowrap;
+        }
+    
+        .album-item {
+            flex: 0 0 auto;
+            width: 200px;
+            height: 200px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            min-width: 200px;
+        }
+    
+        .album-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Styling for the header */
+        .header {
+            background-color: #000000;
+            display: flex;
+            justify-content: space-between; /* To position logo on the left */
+            align-items: center;
+            padding: 20px;
+            color: white;
+            border-bottom: 2px solid black; /* Solid black line as the border */
+        }
+
+        .header img {
+            height: 50px; /* Adjust logo size */
+            width: auto;
+        }
+
+        /* Styling for the text image (next to the logo) */
+        .header .text-logo {
+            height: 50px; /* Adjust size of the text logo */
+            width: auto;
+            margin-left: 10px; /* Add space between the two images */
+        }
+
+        .nav {
+            display: flex;
+            justify-content: flex-end; /* Align buttons to the right */
+        }
+
+        .nav button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            background-color: transparent;
+            border: none;
+            color: white;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .nav button:hover {
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        /* Full-screen image section after the header */
+        .hero-section {
+            position: relative;
+            width: 100%;
+            height: 100vh; /* Takes up the full viewport height */
+            background-image: url("https://pbs.twimg.com/media/GkMtCvuaMAAZftO?format=jpg&name=large");
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Style for the About section */
+        #about {
+            padding: 40px 20px;
+            text-align: center;
+            background-color: #ffffff;
+            display: block; 
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+<!-- Header Section -->
+<header class="header" style="display: flex; justify-content: space-between; align-items: center; padding: 20px; position: relative;">
+    <a href="#home" style="display: flex; align-items: center;">
+        <img src= "https://pbs.twimg.com/media/GkMpK_CaMAAuHck?format=jpg&name=120x120" alt="Treasure Logo" style="height: 50px; margin-right: 10px;">
+        <img src= "https://pbs.twimg.com/media/GkMpK_gXIAAqZZE?format=jpg&name=small" class="text-logo" style="height: 50px;">
+    </a>
+    <!-- Centered Navigation Buttons -->
+    <div class="nav" style="display: flex; justify-content: center; align-items: center; gap: 20px; flex-grow: 1;">
+        <button onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'});">About</button>
+        <button onclick="document.getElementById('members').scrollIntoView({behavior: 'smooth'});">Members</button>
+        <button onclick="document.getElementById('albums').scrollIntoView({behavior: 'smooth'});">Albums</button>
+        <button onclick="document.getElementById('socials').scrollIntoView({behavior: 'smooth'});">Socials</button>  
+    </div>
+    <!-- Call to Action Button -->
+<div style="position: absolute; right: 20px;">
+    <a href="https://www.ygfamily.com/en/artists/treasure/profile" target="_blank">
+        <button style="background-color: #ffffff; color: rgb(0, 0, 0); padding: 10px 20px; border: none; cursor: pointer; font-size: 1.2em; border-radius: 50px;">
+            Know More!
+        </button>
+    </a>
+</div>
+</header>
+
+<!-- Image Section directly below the black border -->
+<div style="width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center; overflow: hidden;">
+    <img src= "https://pbs.twimg.com/media/GkMtCvuaMAAZftO?format=jpg&name=large" alt="Treasure" style="width: 100%; height: 100%; object-fit: cover;">
+</div>
+
+<!-- About Section -->
+<section id="about" style="padding: 40px 20px; text-align: center; background-color: #000000; color: white;">
+    <h3>About Treasure</h3>
+    <p>TREASURE (트레저), is a South Korean boy band formed in 2019 by YG Entertainment, through YG Treasure Box (2018–2019); and consists of 10 members: 
+        Choi Hyun-suk, Jihoon, Yoshi, Junkyu, Yoon Jae-hyuk, Asahi, Doyoung, Haruto, Park Jeong-woo, and So Jung-hwan. 
+        Its former members, Mashiho and Bang Ye-dam, departed from the group in November 2022. 
+        Treasure debuted with the single album The First Step: Chapter One (2020)—the first in a tetralogy of albums which collectively sold over one million copies in five months.</p>
+</section>
+
+<!-- Image Section directly below the About Section -->
+<div style="width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center; overflow: hidden;">
+    <img src= "https://pbs.twimg.com/media/GkMvBvRWUAAjnM_?format=jpg&name=4096x4096" alt="Treasure" style="width: 100%; height: 100%; object-fit: cover;">
+</div>
+    
+<!-- Members Section -->
+<section id="members" style="padding: 40px 20px; text-align: center; background-color: #f1f1f1;">
+    <h2>Meet the Members</h2>
+    <p> Choi Hyunsuk, Park Jihoon, Yoshi, Kim Junkyu, Yoon Jaehyuk, Asahi, Haruto, Kim Doyoung, Park Jeongwoo, and So Junghwan</p>
+    <div class="members-container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+        <!-- Top Row of Members -->
+        <div class="member-item" style="flex: 0 1 calc(20% - 20px);">
+            <img src="https://pbs.twimg.com/media/GdzUc5jawAAMRPH?format=jpg&name=medium" alt="Member 1" style="width: 100%; height: auto; border-radius: 10px;">
+        </div>
+        <div class="member-item" style="flex: 0 1 calc(20% - 20px);">
+            <img src="https://pbs.twimg.com/media/GdzUc5lboAAEp-e?format=jpg&name=medium" alt="Member 2" style="width: 100%; height: auto; border-radius: 10px;">
+        </div>
+        <div class="member-item" style="flex: 0 1 calc(20% - 20px);">
+            <img src="https://pbs.twimg.com/media/GdzUc5ja4AApvLo?format=jpg&name=medium" alt="Member 3" style="width: 100%; height: auto; border-radius: 10px;">
+        </div>
+        <div class="member-item" style="flex: 0 1 calc(20% - 20px);">
+            <img src="https://pbs.twimg.com/media/GdzUsF7aYAALQbP?format=jpg&name=medium" alt="Member 4" style="width: 100%; height: auto; border-radius: 10px;">
+        </div>
+        <div class="member-item" style="flex: 0 1 calc(20% - 20px);">
+            <img src="https://pbs.twimg.com/media/GdzU1W1bgAAPXtq?format=jpg&name=medium" alt="Member 5" style="width: 100%; height: auto; border-radius: 10px;">
+        </div>
+        
+        <!-- Bottom Row of Members -->
+        <div class="member-item" style="flex: 0 1 calc(20% - 20px);">
+            <img src="https://pbs.twimg.com/media/GdzU1WtawAAMspy?format=jpg&name=medium" alt="Member 6" style="width: 100%; height: auto; border-radius: 10px;">
+        </div>
+        <div class="member-item" style="flex: 0 1 calc(20% - 20px);">
+            <img src="https://pbs.twimg.com/media/GdzUsFwbsAAsp27?format=jpg&name=medium" alt="Member 7" style="width: 100%; height: auto; border-radius: 10px;">
+        </div>
+        <div class="member-item" style="flex: 0 1 calc(20% - 20px);">
+            <img src="https://pbs.twimg.com/media/GdzUc5jaoAEvnlU?format=jpg&name=medium" alt="Member 8" style="width: 100%; height: auto; border-radius: 10px;">
+        </div>
+        <div class="member-item" style="flex: 0 1 calc(20% - 20px);">
+            <img src="https://pbs.twimg.com/media/GdzU1Wyb0AA7Ndl?format=jpg&name=medium" alt="Member 9" style="width: 100%; height: auto; border-radius: 10px;">
+        </div>
+        <div class="member-item" style="flex: 0 1 calc(20% - 20px);">
+            <img src="https://pbs.twimg.com/media/GdzUsF1aoAA29PN?format=jpg&name=medium" alt="Member 10" style="width: 100%; height: auto; border-radius: 10px;">
+        </div>
+    </div>
+</section>
+
+
+<!-- Albums Section -->
+<section id="albums" style="padding: 40px 20px; text-align: center; background-color: #ffffff;">
+    <h2>Explore Treasure's Albums</h2>
+    <h4>Experience the Sound of Treasure</h4>
+    <div class="album-scroll-container">
+        
+        <a href="https://open.spotify.com/album/1eRPLg2vSNaNUfPfSjdi0Z?si=5-BKJCKRTE2pvA94Qd-Vcg" target="_blank" class="album-item">
+            <img src="https://www.ygfamily.com/contents/images/2023/04/treasure-album-thefirststepchapterone.jpg" alt="Album 1">
+        </a>
+        <a href="https://open.spotify.com/album/0j5W5CQYZk94YFydK3HO9K?si=NvdPs6w7TOetVBNhJsGNXw" target="_blank" class="album-item">
+            <img src="https://www.ygfamily.com/contents/images/2023/04/treasure-album-thefirststepchaptertwo.jpg" alt="Album 2">
+        </a>
+        <a href="https://open.spotify.com/album/6fjGlzWNub2dRFWPWrOCAr?si=8MPV1WSURY6OxNbCBdhkBw" target="_blank" class="album-item">
+            <img src="https://www.ygfamily.com/contents/images/2023/04/treasure-album-thefirststepchapterthree.jpg" alt="Album 3">
+        </a>
+        <a href="https://open.spotify.com/album/5tQDFmW8QrZdTsICpLQBTL?si=46ewDC2HTJGV2ra20-h4FQ" target="_blank" class="album-item">
+            <img src="https://www.ygfamily.com/contents/images/2023/04/treasure-album-thefirststeptreasureeffect.jpg" alt="Album 4">
+        </a>
+        <a href="https://open.spotify.com/album/3Z5BxpuPKqQzLWuPl2OnMG?si=oiR4_ZegQFG-hFh3qJiVHQ" target="_blank" class="album-item">
+            <img src="https://img.imageimg.net/artist/treasure/img/product_1032564.jpg" alt="Album 5">
+        </a>
+        <a href="https://open.spotify.com/album/17l09k7ZDb4GYwmsIVGcRZ?si=fwVYjbqpSPKBKtlQTbFDAQ" target="_blank" class="album-item">
+            <img src="https://www.ygfamily.com/contents/images/2023/04/treasure-album-thesecondstepchapterone.jpg" alt="Album 6">
+        </a>
+        <a href="https://open.spotify.com/album/4l5YvRcmno5RMKZCZp1j0g?si=igF9MSsvSIWAWe6jyWOwxw" target="_blank" class="album-item">
+            <img src="https://www.ygfamily.com/contents/images/2023/04/treasure-album-thesecondstepchaptertwo.jpg" alt="Album 7">
+        </a>
+        <a href="https://open.spotify.com/album/6XHLf6XkdhyHJzWSUhh1f0?si=ERBIXmkATVibPELwAEwufg" target="_blank" class="album-item">
+            <img src="https://images.genius.com/9becbed24e87772bed86c4ed7cdb6460.1000x1000x1.jpg" alt="Album 8">
+        </a>
+        <a href="https://open.spotify.com/album/2Dk2Cj8BBnJngSoOfWjyL9?si=Lgc716SHSCCgPPs9MIHE6g" target="_blank" class="album-item">
+            <img src="https://www.ygfamily.com/contents/images/2023/08/treasure-album-reboot_1.jpeg" alt="Album 9">
+        </a>
+        <a href="https://open.spotify.com/album/6y3M8ZMT6jmpXmsp5wRm0k?si=RFJq7dDBQLuNYUAkKvYQfA" target="_blank" class="album-item">
+            <img src="https://www.ygfamily.com/contents/images/2024/01/bomb_960*960_1.jpg" alt="Album 10">
+        </a>
+        <a href="https://open.spotify.com/album/43R91w6pa9rmQVPVjcPFTT?si=tiTRP_A4T5ybtR1BUbOu3wn3HhsMO5h27YzX" target="_blank" class="album-item">
+            <img src="https://www.ygfamily.com/contents/images/2024/05/TS_album_1.jpg" alt="Album 11">
+        </a>
+        <a href="https://open.spotify.com/album/5XbOYpZ0LZQ41FhwCtxITr?si=IhGABbpITPSD_nX-1QaO3w" target="_blank" class="album-item">
+            <img src="https://i.scdn.co/image/ab67616d0000b273a31a6d99d311edf86f8427a6" alt="Album 12">
+        </a>
+    </div>
+</section>
+
+<!-- Section 3: Social Links -->
+<section id="socials" style="padding: 40px 20px; text-align: center; background-color: #000000; color: white;">
+    <div class="social-links">
+        <h2>Follow Treasure on Social Media:</h2>
+        <p>   </p>
+        <a href="https://www.instagram.com/yg_treasure_official/" target="_blank" style="color: #aaabac; margin: 0 15px; font-size: 1.5em; text-decoration: none;">
+            <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="https://twitter.com/treasuremembers" target="_blank" style="color: #aaabac; margin: 0 15px; font-size: 1.5em; text-decoration: none;">
+            <i class="fab fa-twitter"></i> Twitter
+        </a>
+        <a href="https://www.tiktok.com/@ygtreasure_official" target="_blank" style="color: #aaabac; margin: 0 15px; font-size: 1.5em; text-decoration: none;">
+            <i class="fab fa-tiktok"></i> TikTok
+        </a>
+        <a href="https://www.youtube.com/@TREASURE" target="_blank" style="color: #aaabac; margin: 0 15px; font-size: 1.5em; text-decoration: none;">
+            <i class="fab fa-youtube"></i> YouTube
+        </a>
+        <a href="https://open.spotify.com/artist/3KonOYiLsU53m4yT7gNotP?si=TVbk4svERaqw0LybYTF8MQ" target="_blank" style="color: #aaabac; margin: 0 15px; font-size: 1.5em; text-decoration: none;">
+            <i class="fab fa-spotify"></i> Spotify
+    </div>
+</section>
+
+<!-- Footer -->
+<footer style="text-align: center; background-color: #f7f7f7; padding: 20px; color: #888;">
+    <p>&copy; 2024 Shahlyna (BSIT 3-1). Treasure. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
